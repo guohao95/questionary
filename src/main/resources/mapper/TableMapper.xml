@@ -11,7 +11,7 @@
             and agency_address like '%${city}%'
         </if>
         <if test="(start!=null and end!=null)">
-            and created_time between #{start} and #{end}
+            and created_time between #{start} and date_sub(#{end},interval -1 day)
         </if>
         order by created_time desc
     </select>
