@@ -12,7 +12,7 @@ public class JwtUtil {
     // 创建token
     public static TokenVO CreateToken(String username) {
         Long expireTime = System.currentTimeMillis() + 1000 * 60 * 60 * 24 * 7;
-        Map<String, Object> map = new HashMap<>() {
+        Map<String, Object> map = new HashMap<String,Object>() {
             private static final long serialVersionUID = 1L;
 
             {

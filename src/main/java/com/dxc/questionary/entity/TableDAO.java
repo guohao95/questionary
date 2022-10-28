@@ -92,6 +92,12 @@ public class TableDAO {
     @ColumnWidth(25)
     private String lastYearProperty;
 
+    @ExcelProperty(value = "上年度纳税总额（万元）", order = 12)
+    @ApiModelProperty(value = "上年度纳税总额（万元）", required = true)
+    @NotBlank(message = "上年度纳税总额（万元）不能为空")
+    @ColumnWidth(25)
+    private String lastYearTarrifyProperty;
+
     @ExcelProperty(value = "职工人数", order = 13)
     @ApiModelProperty(value = "职工人数", required = true)
     @NotBlank(message = "职工人数不能为空")
