@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 配置表与类映射namespace：命名空间-->
+<mapper namespace="com.dxc.questionary.mapper.TableMapper">
+    <!--find by time or city-->
+    <select id="find" resultType="com.dxc.questionary.entity.TableDAO">
+        select * from questionary_table where 1=1
+        <if test="city!=null and city!=''">
+            and agency_address like '%${city}%'
+        </if>
+        <if test="(start!=null and end!=null)">
+            and created_time between #{start} and #{end}
+        </if>
+        order by created_time desc
+    </select>
+</mapper>
