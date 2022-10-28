@@ -13,7 +13,6 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
-import javax.validation.Valid;
 import java.io.IOException;
 import java.net.URLEncoder;
 import java.text.ParseException;
@@ -29,6 +28,7 @@ import java.util.List;
 @Validated
 @RequestMapping("/table")
 @Api(tags = "表格集合")
+//@CrossOrigin
 public class TableController {
     @Autowired
     TableService tableService;
