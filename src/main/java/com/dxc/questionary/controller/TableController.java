@@ -28,7 +28,7 @@ import java.util.List;
 @Validated
 @RequestMapping("/table")
 @Api(tags = "表格集合")
-//@CrossOrigin
+@CrossOrigin(originPatterns = "*")
 public class TableController {
     @Autowired
     TableService tableService;
