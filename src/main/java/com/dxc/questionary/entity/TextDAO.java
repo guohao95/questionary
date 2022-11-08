@@ -20,7 +20,7 @@ public class TextDAO {
 
     @ApiModelProperty(value = "章程", required = true)
     @NotBlank(message = "章程不能为空")
-    private Long text;
+    private String text;
 
     @ApiModelProperty(value = "创建时间", required = true)
     private String createdTime;

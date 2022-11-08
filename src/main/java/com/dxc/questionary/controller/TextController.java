@@ -3,6 +3,8 @@ package com.dxc.questionary.controller;
 import com.dxc.questionary.config.JSONResult;
 import com.dxc.questionary.config.constant.Constant;
 import com.dxc.questionary.entity.TableDAO;
+import com.dxc.questionary.entity.TextDAO;
+import com.dxc.questionary.entity.TextVO;
 import com.dxc.questionary.service.TextService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -23,10 +25,10 @@ public class TextController {
     @Autowired
     TextService textService;
 
-    @PutMapping("/update")
+    @PostMapping("/update")
     @ApiOperation(value = "新增章程")
-    public JSONResult save(String text) {
-        textService.updateText(text);
+    public JSONResult save(@RequestBody TextVO text) {
+        textService.updateText(text.getText());
         return JSONResult.OK();
     }
 
