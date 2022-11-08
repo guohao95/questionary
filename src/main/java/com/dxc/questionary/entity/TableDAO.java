@@ -1,7 +1,6 @@
 package com.dxc.questionary.entity;
 
 import com.alibaba.excel.annotation.ExcelProperty;
-import com.alibaba.excel.annotation.format.DateTimeFormat;
 import com.alibaba.excel.annotation.write.style.ColumnWidth;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -58,13 +57,11 @@ public class TableDAO {
 
     @ExcelProperty(value = "统一社会信用代码", order = 7)
     @ApiModelProperty(value = "统一社会信用代码", required = true)
-    @NotBlank(message = "统一社会信用代码不能为空")
     @ColumnWidth(25)
     private String uniteSocialCreditCode;
 
     @ExcelProperty(value = "注册资本", order = 8)
     @ApiModelProperty(value = "注册资本", required = true)
-    @NotBlank(message = "注册资本不能为空")
     @ColumnWidth(25)
     private String registeredCaptial;
 
@@ -74,33 +71,28 @@ public class TableDAO {
     @ColumnWidth(25)
     private String artificialPerson;
 
-    @ExcelProperty(value = "联系电话", order = 10)
-    @ApiModelProperty(value = "联系电话", required = true)
-    @NotBlank(message = "联系电话不能为空")
+    @ExcelProperty(value = "法人联系电话", order = 10)
+    @ApiModelProperty(value = "法人联系电话", required = true)
     @ColumnWidth(25)
     private String phone;
 
     @ExcelProperty(value = "上半年主营业收入（万元）", order = 11)
     @ApiModelProperty(value = "上半年主营业收入（万元）", required = true)
-    @NotBlank(message = "上半年主营业收入（万元）不能为空")
     @ColumnWidth(25)
     private String halfIncome;
 
     @ExcelProperty(value = "上年末总资产（万元）", order = 12)
     @ApiModelProperty(value = "上年末总资产（万元）", required = true)
-    @NotBlank(message = "上年末总资产（万元）不能为空")
     @ColumnWidth(25)
     private String lastYearProperty;
 
     @ExcelProperty(value = "上年度纳税总额（万元）", order = 12)
     @ApiModelProperty(value = "上年度纳税总额（万元）", required = true)
-    @NotBlank(message = "上年度纳税总额（万元）不能为空")
     @ColumnWidth(25)
     private String lastYearTarrifyProperty;
 
     @ExcelProperty(value = "职工人数", order = 13)
     @ApiModelProperty(value = "职工人数", required = true)
-    @NotBlank(message = "职工人数不能为空")
     @ColumnWidth(25)
     private String employeeNumber;
 
@@ -136,7 +128,6 @@ public class TableDAO {
 
     @ExcelProperty(value = "单位简介", order = 19)
     @ApiModelProperty(value = "单位简介", required = true)
-    @NotBlank(message = "单位简介不能为空")
     @ColumnWidth(25)
     private String agencyProfile;
 
