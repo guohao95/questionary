@@ -28,13 +28,13 @@ public class TextController {
     @PostMapping("/update")
     @ApiOperation(value = "新增章程")
     public JSONResult save(@RequestBody TextVO text) {
-        textService.updateText(text.getText());
+        textService.updateText(text);
         return JSONResult.OK();
     }
 
     @GetMapping("/get")
     @ApiOperation(value = "查询章程")
-    public JSONResult get() {
-        return JSONResult.Ok(Constant.OPERATION_SUCCESS, textService.getText());
+    public JSONResult get(String type) {
+        return JSONResult.Ok(Constant.OPERATION_SUCCESS, textService.getText(type));
     }
 }

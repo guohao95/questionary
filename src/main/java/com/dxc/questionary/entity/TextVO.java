@@ -8,4 +8,5 @@ import lombok.Data;
 @Data
 public class TextVO {
     private String text;
+    private String type;
 }

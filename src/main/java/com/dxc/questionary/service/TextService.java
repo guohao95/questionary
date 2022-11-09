@@ -1,5 +1,6 @@
 package com.dxc.questionary.service;
 
+import com.dxc.questionary.entity.TextVO;
 import org.springframework.stereotype.Service;
 
 /**
@@ -7,7 +8,7 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public interface TextService {
-    String getText();
+    String getText(String type);
 
-    void updateText(String str);
+    void updateText(TextVO t);
 }

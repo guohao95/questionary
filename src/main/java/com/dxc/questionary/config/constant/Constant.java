@@ -11,7 +11,9 @@ public class Constant {
     public static final String OPERATION_ERROR = "操作失败";
 
     public static final String LOGIN_URL = "login";
-
     public static final String TOKEN_SECRET = "Jmyqx6kb";
 
+    public static final String TEXT_TYPE = "text";
+
+    public static final String STRUCT_TYPE = "struct";
 }
